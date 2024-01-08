@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign in</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Lobster&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1 class="heading">Hey there</h1>
+      <p class="content">
+        <span>We'd like to hear from you.</span> Send us your message or just
+        say hy with our contact form or directy via phoen, we love to chat.
+      </p>
+      <form action="">
+        <div class="btn-box">
+          <i class="fa-regular fa-user"></i>
+          <input type="text" name="name" placeholder="Your name" required />
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="btn-box">
+          <i class="fa-regular fa-envelope"></i>
+          <input
+            type="email"
+            name="email"
+            placeholder="your@domain.com"
+            required
+          />
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="btn-box">
+          <i class="fa-solid fa-mobile-screen-button"></i>
+          <input type="tel" name="tel" placeholder="+44 00 123" required /><i
+            class="fa-solid fa-star"
+          ></i>
+        </div>
+        <div class="btn-box">
+          <i class="fa-regular fa-address-book"></i>
+          <select name="subject" required>
+            <option value="">Subject</option>
+          </select>
+        </div>
+        <div class="btn-box btn-box-textarea">
+          <i class="fa-regular fa-message"></i>
+          <textarea
+            name="message"
+            cols="30"
+            rows="10"
+            placeholder="Message"
+          ></textarea>
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="btn-checkbox">
+          <div>
+            <input type="checkbox" name="send-message" required />
+            <span>Send me a copy of this message</span>
+          </div>
+          <button class="btn">SEND</button>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

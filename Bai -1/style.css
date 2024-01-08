@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(238, 174, 202);
+  background: radial-gradient(
+    circle,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 100%
+  );
+}
+
+.wrapper {
+  width: 420px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  background: rgb(131, 58, 180);
+  background: linear-gradient(
+    90deg,
+    rgba(131, 58, 180, 1) 0%,
+    rgba(253, 29, 29, 1) 50%,
+    rgba(252, 176, 69, 1) 100%
+  );
+}
+
+/* Heading */
+
+.heading {
+  font-family: "Lobster", sans-serif;
+}
+
+.content {
+  margin-top: 20px;
+
+  font-size: 12px;
+}
+
+.content span {
+  color: none;
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 193, 195, 1) 0%,
+    rgba(17, 23, 193, 0.7863247863247863) 100%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+/* Form */
+
+.wrapper .btn-box {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  margin: 30px 0;
+}
+
+.btn-box input,
+select {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  background-color: rgb(249, 251, 251);
+  border: none;
+  outline: none;
+  border-left: 40px solid rgba(53, 50, 50, 0.2);
+
+  opacity: 80%;
+}
+
+.btn-box input:hover,
+select:hover,
+.btn-box-textarea textarea:hover {
+  opacity: 100%;
+  border-left-color: #000;
+  outline: 1px solid #000;
+}
+
+select .btn-box input::placeholder {
+  color: #d0caca;
+}
+
+.btn-box i:first-of-type {
+  position: relative;
+  bottom: -30px;
+  left: 13px;
+}
+
+.btn-box:hover i:first-of-type {
+  color: #fff;
+  z-index: 1;
+}
+
+.btn-box .fa-solid.fa-star {
+  position: relative;
+  top: -33px;
+  right: -335px;
+  font-size: 10px;
+  opacity: 10%;
+}
+
+.wrapper .btn-box-textarea {
+  position: relative;
+  width: 100%;
+  height: 100px;
+  margin: 30px 0;
+}
+
+.btn-box-textarea textarea {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(229, 240, 240);
+  border: none;
+  outline: none;
+  border-left: 40px solid rgba(53, 50, 50, 0.2);
+
+  opacity: 80%;
+}
+
+.btn-box-textarea textarea::placeholder {
+  padding: 10px 10px;
+  color: #8d8b8b;
+}
+
+.btn-box-textarea i {
+  position: relative;
+  bottom: -20px;
+  left: 13px;
+}
+
+.btn-box-textarea .fa-solid.fa-star {
+  position: relative;
+  top: -105px;
+  left: 335px;
+  font-size: 10px;
+  opacity: 10%;
+}
+
+/* Check box and Send */
+
+.btn-checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.btn-checkbox .btn {
+  padding: 10px 30px;
+  border: none;
+  outline: none;
+
+  background-color: rgb(226, 29, 29);
+  color: #fff;
+}
+
+.btn-checkbox span {
+  font-size: 14px;
+
+  color: #d0caca;
+}
+
+.btn-checkbox input {
+  width: 20px;
+  height: 20px;
+}
