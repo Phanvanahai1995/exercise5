@@ -11,60 +11,71 @@
       rel="stylesheet"
     />
     <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./reset.css" />
+    <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="wrapper">
-      <h1 class="heading">Hey there</h1>
-      <p class="content">
+    <div class="container">
+      <h2 class="heading">Hey there</h2>
+      <p class="desc">
         <span>We'd like to hear from you.</span> Send us your message or just
         say hy with our contact form or directy via phoen, we love to chat.
       </p>
-      <form action="">
-        <div class="btn-box">
-          <i class="fa-regular fa-user"></i>
+      <form>
+        <div class="form-item">
           <input type="text" name="name" placeholder="Your name" required />
+          <i class="fa-regular fa-user"></i>
           <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-xmark"></i>
         </div>
-        <div class="btn-box">
-          <i class="fa-regular fa-envelope"></i>
+        <div class="form-item">
           <input
             type="email"
             name="email"
             placeholder="your@domain.com"
             required
           />
+          <i class="fa-regular fa-envelope"></i>
           <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-xmark"></i>
         </div>
-        <div class="btn-box">
+        <div class="form-item">
+          <input type="tel" name="tel" placeholder="+44 00 123" required />
           <i class="fa-solid fa-mobile-screen-button"></i>
-          <input type="tel" name="tel" placeholder="+44 00 123" required /><i
-            class="fa-solid fa-star"
-          ></i>
-        </div>
-        <div class="btn-box">
-          <i class="fa-regular fa-address-book"></i>
-          <select name="subject" required>
-            <option value="">Subject</option>
-          </select>
-        </div>
-        <div class="btn-box btn-box-textarea">
-          <i class="fa-regular fa-message"></i>
-          <textarea
-            name="message"
-            cols="30"
-            rows="10"
-            placeholder="Message"
-          ></textarea>
           <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-xmark"></i>
         </div>
-        <div class="btn-checkbox">
-          <div>
-            <input type="checkbox" name="send-message" required />
-            <span>Send me a copy of this message</span>
+        <div class="form-item">
+          <select name="subject" required>
+            <option value="Subject">Subject</option>
+          </select>
+          <i class="fa-regular fa-address-book"></i>
+          <i class="bx bxs-sort-alt"></i>
+        </div>
+        <div class="form-item form-item-textarea">
+          <textarea name="message" placeholder="Message"></textarea>
+          <i class="fa-regular fa-message"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-xmark"></i>
+        </div>
+        <div class="action-submit">
+          <div class="input-checkbox">
+            <input
+              type="checkbox"
+              name="send-message"
+              id="send-message"
+              hidden
+            />
+            <label for="send-message" class="label-checkbox"
+              >Send me a copy of this message</label
+            >
           </div>
           <button class="btn">SEND</button>
         </div>
