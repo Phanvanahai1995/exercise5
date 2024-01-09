@@ -43,6 +43,7 @@ body {
 }
 
 .form-item {
+  position: relative;
   width: 100%;
   height: 50px;
   background-color: orange;
@@ -58,38 +59,6 @@ textarea {
   border: none;
   outline: none;
   border: 2px solid #cacaca;
-}
-
-input:hover,
-select:hover,
-textarea:hover {
-  border-color: #000;
-}
-
-input:hover + i:first-of-type,
-select:hover + i:first-of-type,
-textarea:hover + i:first-of-type {
-  background-color: #000;
-}
-
-input:hover ~ .fa-star,
-select:hover ~ .fa-star,
-textarea:hover ~ .fa-star,
-select:hover ~ .bx {
-  color: #534e4e;
-}
-
-input:focus ~ .fa-star,
-select:focus ~ .fa-star,
-textarea:focus ~ .fa-star {
-  opacity: 0;
-}
-
-input:focus ~ .fa-xmark,
-select:focus ~ .fa-xmark,
-textarea:focus ~ .fa-xmark {
-  display: block;
-  color: #555151;
 }
 
 .fa-xmark {
@@ -144,9 +113,90 @@ textarea::placeholder {
   font-family: "Lato", sans-serif;
 }
 
+/* Hover - focus - active */
+
+input:hover,
+select:hover,
+textarea:hover {
+  border-color: #000;
+}
+
+input:hover ~ i:first-of-type,
+select:hover ~ i:first-of-type,
+textarea:hover ~ i:first-of-type {
+  background-color: #000;
+}
+
+input:hover ~ .fa-star,
+select:hover ~ .fa-star,
+textarea:hover ~ .fa-star,
+select:hover ~ .bx {
+  color: #534e4e;
+}
+
+input:focus ~ .fa-star,
+select:focus ~ .fa-star,
+textarea:focus ~ .fa-star {
+  opacity: 0;
+}
+
+input:focus ~ .fa-xmark,
+select:focus ~ .fa-xmark,
+textarea:focus ~ .fa-xmark {
+  display: block;
+  color: #555151;
+}
+
+.input-preview {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: -46px;
+  left: 50px;
+  width: 120px;
+  height: 30px;
+  border-radius: 5px;
+  font-size: 12px;
+  background-color: #343030;
+
+  color: #fff;
+}
+
+.input-preview::before {
+  content: "";
+  display: none;
+  position: absolute;
+  bottom: -18px;
+  display: block;
+  border: 10px solid;
+  border-color: #343030 transparent transparent transparent;
+}
+
+input:focus + .input-preview,
+input:focus + .input-preview::before {
+  display: flex;
+}
+
+input:not(:placeholder-shown) + .input-preview {
+  display: none;
+}
+
+/* Select */
+
 select {
+  appearance: none;
   position: relative;
 }
+
+.form-item .bx {
+  position: relative;
+  top: -83px;
+  left: 409px;
+  color: #cacaca;
+}
+
+/* Submit */
 
 .action-submit {
   display: flex;
@@ -204,17 +254,4 @@ input[type="checkbox"]:checked + .label-checkbox::before {
 .btn:hover {
   cursor: pointer;
   opacity: 0.6;
-}
-
-/* Select */
-
-select {
-  appearance: none;
-}
-
-.form-item .bx {
-  position: relative;
-  top: -83px;
-  left: 409px;
-  color: #cacaca;
 }
