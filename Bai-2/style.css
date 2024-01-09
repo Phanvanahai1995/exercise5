@@ -20,7 +20,7 @@ body {
 .container.main {
   width: 700px;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: #fff;
 }
 
 .container.main section label {
@@ -29,13 +29,8 @@ body {
   width: 100%;
   padding: 15px 40px;
   cursor: pointer;
-  background: rgb(2, 0, 36);
-  background: linear-gradient(
-    90deg,
-    rgba(2, 0, 36, 1) 0%,
-    rgba(9, 9, 121, 1) 25%,
-    rgba(255, 0, 232, 1) 100%
-  );
+  background: #d95925;
+
   color: #fff;
 }
 
