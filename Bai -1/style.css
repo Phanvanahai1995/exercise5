@@ -62,15 +62,15 @@ textarea {
 }
 
 .fa-xmark {
-  position: relative;
+  position: absolute;
   display: none;
-  top: -98px;
+  top: 18px;
   left: 411px;
 }
 
-textarea ~ .fa-xmark {
+/* textarea ~ .fa-xmark {
   top: -206px;
-}
+} */
 
 .form-item-textarea textarea {
   height: 100px;
@@ -80,8 +80,8 @@ textarea ~ .fa-xmark {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative;
-  top: -50px;
+  position: absolute;
+  top: 0px;
   width: 50px;
   height: 100%;
   background-color: #cacaca;
@@ -92,25 +92,23 @@ textarea ~ .fa-xmark {
 .form-item-textarea i:first-of-type {
   padding-top: 10px;
   align-items: flex-start;
-  top: -102px;
   height: 100px;
 }
 
-.fa-star {
-  position: relative;
-  top: -85px;
-  right: -411px;
-  font-size: 10px;
+.fa-star,
+.form-item .bx {
+  position: absolute;
+  top: 21px;
+  right: 16px;
   color: #cacaca;
 }
 
-.form-item-textarea .fa-star {
-  top: -194px;
+.fa-star {
+  font-size: 10px;
 }
 
 textarea::placeholder {
   padding-top: 10px;
-  font-family: "Lato", sans-serif;
 }
 
 /* Hover - focus - active */
@@ -189,13 +187,6 @@ select {
   position: relative;
 }
 
-.form-item .bx {
-  position: relative;
-  top: -83px;
-  left: 409px;
-  color: #cacaca;
-}
-
 /* Submit */
 
 .action-submit {
@@ -227,10 +218,6 @@ select {
   border: 2px solid #cacaca;
 }
 
-input[type="checkbox"]:checked + .label-checkbox::after {
-  border-color: orange;
-}
-
 input[type="checkbox"]:checked + .label-checkbox::before {
   position: absolute;
   top: 3px;
@@ -239,8 +226,8 @@ input[type="checkbox"]:checked + .label-checkbox::before {
   display: block;
   width: 10px;
   height: 6px;
-  border-bottom: 2px solid red;
-  border-left: 2px solid red;
+  border-bottom: 2px solid #000;
+  border-left: 2px solid #000;
   rotate: -45deg;
 }
 
